@@ -1,7 +1,7 @@
 public class VicePresident extends Student {
 
-    public VicePresident(String name, String rollNumber, String phone, String email) {
-        super(name, rollNumber, phone, email);
+    public VicePresident(Student student) {
+        super(student.getName(), student.getRollNumber(), student.getPhone(), student.getEmail());
     }
     
 }

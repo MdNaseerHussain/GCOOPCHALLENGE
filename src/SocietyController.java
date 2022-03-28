@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class SocietyController {
     private static ArrayList<Society> societies = new ArrayList<Society>(Arrays.asList(new Society("Neuromancers"), new Society("RISC")));
 
-    public void inductStudent(Scanner scanner, StudentController studentController) {
+    public static void inductStudent(Scanner scanner) {
         Society society = getSociety(scanner);
         if(society == null) {
             System.out.println("Society does not exist");
             return;
         }
-        Student student = studentController.getStudent(scanner);
+        Student student = StudentController.getStudent(scanner);
         if(student == null) {
             System.out.println("Student does not exist");
         } else {
@@ -19,7 +19,7 @@ public class SocietyController {
         }
     }
 
-    public void holdPolls(Scanner scanner, StudentController studentController) {
+    public static void holdPolls(Scanner scanner) {
         Society society = getSociety(scanner);
         if(society == null) {
             System.out.println("Society does not exist");
@@ -31,7 +31,7 @@ public class SocietyController {
         ArrayList<Integer> votes = new ArrayList<Integer>();
         for(int i = 1; i <= count; i++) {
             System.out.print("Candidate " + i + " ");
-            Student student = studentController.getStudent(scanner);
+            Student student = StudentController.getStudent(scanner);
             if(student == null) {
                 continue;
             }
@@ -57,8 +57,8 @@ public class SocietyController {
                 leadingCandidate = (SocietyMember) candidates.get(vote - 1);
             }
         }
-        System.out.println("New Secretary is: " + leadingCandidate.getName());
         society.setSecretary(new Secretary(StudentController.getStudents().get(leadingCandidate.getRollNumber()), society.getName()));
+        System.out.println("New Secretary is: " + society.getSecretary().getName());
     }
 
     public static Society getSociety(Scanner scanner) {

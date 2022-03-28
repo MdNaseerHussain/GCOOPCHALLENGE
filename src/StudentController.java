@@ -12,14 +12,14 @@ public class StudentController {
         StudentController.students = students;
     }
 
-    public Student getStudent(Scanner scanner) {
+    public static Student getStudent(Scanner scanner) {
         System.out.println("Enter Roll Number:");
         String rollNumber = scanner.nextLine();
         Student student = students.get(rollNumber);
         return student;
     }
 
-    public void addStudent(Scanner scanner) {
+    public static void addStudent(Scanner scanner) {
         System.out.println();
         System.out.println("Enter Name of the Student:");
         String name = scanner.nextLine();
