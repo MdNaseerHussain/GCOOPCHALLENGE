@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class VicePresidentController {
+abstract class VicePresidentController {
     public static void holdPolls(Scanner scanner) {
         System.out.println("Enter the number of candidates:");
         int count = Integer.parseInt(scanner.nextLine());

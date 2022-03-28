@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class StudentController {
+abstract class StudentController {
     private static HashMap<String, Student> students = new HashMap<String, Student>();
 
     public static HashMap<String, Student> getStudents() {

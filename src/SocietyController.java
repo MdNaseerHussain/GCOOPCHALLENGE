@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SocietyController {
+abstract class SocietyController {
     private static ArrayList<Society> societies = new ArrayList<Society>(Arrays.asList(new Society("Neuromancers"), new Society("RISC")));
 
     public static void inductStudent(Scanner scanner) {
