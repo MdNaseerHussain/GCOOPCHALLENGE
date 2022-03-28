@@ -1,10 +1,12 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Society {
     private String name;
     private Secretary secretary;
     private HashMap<String, SocietyMember> societyMembers = new HashMap<String, SocietyMember>();
-    
+    private ArrayList<Event> events = new ArrayList<Event>();
+
     public Society(String name) {
         this.name = name;
     }
@@ -25,6 +27,12 @@ public class Society {
     }
     public void setSocietyMembers(HashMap<String, SocietyMember> societyMembers) {
         this.societyMembers = societyMembers;
+    }
+    public ArrayList<Event> getEvents() {
+        return events;
+    }
+    public void setEvents(ArrayList<Event> events) {
+        this.events = events;
     }
     public void inductStudent(Student student) {
         SocietyMember societyMember = new SocietyMember(student, name);

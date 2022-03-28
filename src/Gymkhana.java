@@ -15,6 +15,7 @@ public class Gymkhana {
         System.out.println("Press 5: Sanction Fund for event");
         System.out.println("Press 6: Discuss about an event");
         System.out.println("Press 7: Hold VP Elections");
+        System.out.println("Press 8: Hold GSec Elections");
         System.out.println("Any Key: Exit");
         String command = scanner.nextLine();
         switch (command) {
@@ -28,31 +29,25 @@ public class Gymkhana {
             SocietyController.holdPolls(scanner);
             break;
           case "4":
-            proposeBudget(scanner);
+            GSecController.proposeBudget(scanner);
             break;
           case "5":
-            sanctionFund(scanner);
+            PresidentController.sanctionFund(scanner);
             break;
           case "6":
-            discussEvent(scanner);
+            VicePresidentController.discussEvent(scanner);
             break;
           case "7":
             VicePresidentController.holdPolls(scanner);
             System.out.println("New Vice President is: " + vp.getName());
             break;
+          case "8":
+            GSecController.holdPolls(scanner);
+            break;
           default:
             scanner.close();
             return;
-          }
+        }
       }
-    }
-
-    private static void discussEvent(Scanner scanner) {
-    }
-
-    private static void sanctionFund(Scanner scanner) {
-    }
-
-    private static void proposeBudget(Scanner scanner) {
     }
 }

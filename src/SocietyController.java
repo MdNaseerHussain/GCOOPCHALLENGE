@@ -5,6 +5,14 @@ import java.util.Scanner;
 abstract class SocietyController {
     private static ArrayList<Society> societies = new ArrayList<Society>(Arrays.asList(new Society("Neuromancers"), new Society("RISC")));
 
+    public static ArrayList<Society> getSocieties() {
+        return societies;
+    }
+
+    public static void setSocieties(ArrayList<Society> societies) {
+        SocietyController.societies = societies;
+    }
+
     public static void inductStudent(Scanner scanner) {
         Society society = getSociety(scanner);
         if(society == null) {

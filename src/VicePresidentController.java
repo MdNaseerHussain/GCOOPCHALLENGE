@@ -1,7 +1,26 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-abstract class VicePresidentController {
+interface VicePresidentController {
+    public static void discussEvent(Scanner scanner) {
+        System.out.println("Enter event name:");
+        String name = scanner.nextLine();
+        System.out.println("Enter date in DD-MM-YY format:");
+        String date = scanner.nextLine();
+        Society society = SocietyController.getSociety(scanner);
+        ArrayList<String> tasks = new ArrayList<String>();
+        System.out.println("Enter number of tasks:");
+        int count = Integer.parseInt(scanner.nextLine());
+        for(int i = 1; i <= count; i++) {
+            System.out.println("Enter task " + i + " :");
+            String task = scanner.nextLine();
+            tasks.add(task);
+        }
+        ArrayList<Event> events = society.getEvents();
+        events.add(new Event(date, name, tasks));
+        society.setEvents(events);
+    }
+
     public static void holdPolls(Scanner scanner) {
         System.out.println("Enter the number of candidates:");
         int count = Integer.parseInt(scanner.nextLine());
