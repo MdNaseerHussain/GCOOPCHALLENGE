@@ -1,5 +1,13 @@
 import java.util.Scanner;
 
+import GSec.GSecController;
+import President.President;
+import President.PresidentController;
+import Society.SocietyController;
+import Student.StudentController;
+import VicePresident.VicePresident;
+import VicePresident.VicePresidentController;
+
 public class Gymkhana {
     public static President president = new President("Prof.Pres", "xxxxxxxxxx", "xxxx@iitbbs.ac.in");
     public static VicePresident vp;
@@ -38,7 +46,7 @@ public class Gymkhana {
             VicePresidentController.discussEvent(scanner);
             break;
           case "7":
-            VicePresidentController.holdPolls(scanner);
+            vp = VicePresidentController.holdPolls(scanner);
             System.out.println("New Vice President is: " + vp.getName());
             break;
           case "8":
