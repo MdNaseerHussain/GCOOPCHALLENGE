@@ -1,4 +1,4 @@
-﻿**Gymkhana Management System-**
+﻿#Gymkhana Management System-#
 
 **Models:**
 
@@ -19,9 +19,9 @@
 1. SocietyController.java (abstract class)
 1. StudentController.java (abstract class)
 
-**Student:**
+##Student:##
 
-` `**Parent Class:** _None_
+**Parent Class:** _None_
 
 **Model Attributes:**
 
@@ -35,17 +35,17 @@
 - _void_ addStudent(Scanner) : Creates a new student.
 - _Student_ getStudent(Scanner) : Fetch a student object based on roll number.
 
-**SocietyMember:**
+##SocietyMember:##
 
-` `**Parent Class:** _Student_
+**Parent Class:** _Student_
 
 **Model Attributes:**
 
 - _String_ societyName
 
-**Event:**
+##Event:##
 
-` `**Parent Class:** _None_
+**Parent Class:** _None_
 
 **Model Attributes:**
 
@@ -54,9 +54,9 @@
 - _ArrayList<String>_ tasks
 - _int_ budget
 
-**Society:**
+##Society:##
 
-` `**Parent Class:** _None_
+**Parent Class:** _None_
 
 **Model Attributes:**
 
@@ -71,11 +71,11 @@
 - _void_ holdPolls(Scanner) : Holds elections for secretary.
 - _Society_ getSociety(Scanner) : Select a society from the list of societies.
 
-**Secretary:**
+##Secretary:##
 
-` `**Parent Class:** _SocietyMember_
+**Parent Class:** _SocietyMember_
 
-**GSec:**
+##GSec:##
 
 **Parent Class:** _Student_
 
@@ -89,7 +89,7 @@
 - _void_ proposeBudget(Scanner) : Propose budget to be approved to the President.
 - _void_ holdPolls(int) : Hold GSec Elections.
 
-**VicePresident:**
+##VicePresident:##
 
 **Parent Class:** _Student_
 
@@ -98,7 +98,7 @@
 - _void_ discussEvent(Scanner) : Assign an event to a Society.
 - _void_ holdPolls(int) : Hold VP Elections.
 
-**President:**
+##President:##
 
 **Model Attributes:**
 
