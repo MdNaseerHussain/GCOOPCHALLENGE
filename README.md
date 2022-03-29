@@ -21,7 +21,7 @@
 
 **Student:**
 
-` `**Parent Class:** _None_
+    **Parent Class:** _None_
 
 **Model Attributes:**
 
