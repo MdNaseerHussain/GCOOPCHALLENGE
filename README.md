@@ -2,26 +2,26 @@
 
 **Models:**
 
-1. President.java (class)
-1. VicePresident.java (class)
-1. GSec.java (class)
-1. Society.java (class)
-1. Secretary.java (class)
-1. SocietyMember.java (class)
-1. Student.java (class)
-1. Event.java (class)
+1. President.java` `(class)
+1. VicePresident.java` `(class)
+1. GSec.java` `(class)
+1. Society.java` `(class)
+1. Secretary.java` `(class)
+1. SocietyMember.java` `(class)
+1. Student.java` `(class)
+1. Event.java` `(class)
 
 **Controllers:**
 
-1. PresidentController.java (interface)
-1. VicePresidentController.java (interface)
-1. GSecController.java (abstract class)
-1. SocietyController.java (abstract class)
-1. StudentController.java (abstract class)
+1. PresidentController.java` `(interface)
+1. VicePresidentController.java` `(interface)
+1. GSecController.java` `(abstract class)
+1. SocietyController.java` `(abstract class)
+1. StudentController.java` `(abstract class)
 
 **Student:**
 
-    **Parent Class:** _None_
+` `**Parent Class:** _None_
 
 **Model Attributes:**
 
